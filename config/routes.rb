@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
   namespace :admin do
+    resources :recipe_ingredients
     resources :recipes
   end
   # mount Fae below your admin namespec
