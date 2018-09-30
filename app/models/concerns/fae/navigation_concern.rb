@@ -25,6 +25,7 @@ module Fae
 
     def structure
       [
+        item('Recipes', path: admin_recipes_path),
         # scaffold inject marker
       ]
     end
