@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :recipes, only: [:show]
 
   namespace :admin do
     resources :recipe_ingredients

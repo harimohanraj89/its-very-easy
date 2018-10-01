@@ -1,1 +1,11 @@
 == render 'form'
+
+section.content
+  = render 'fae/shared/nested_table',
+      assoc: :recipe_ingredients,
+      parent_item: @item,
+      cols: [:name, :preview_image],
+      ordered: true
+
+section.content
+  = link_to 'View Public Page', recipe_path(@item.slug), class: 'button'
