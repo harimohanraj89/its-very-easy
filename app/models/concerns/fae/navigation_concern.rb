@@ -26,6 +26,7 @@ module Fae
     def structure
       [
         item('Recipes', path: admin_recipes_path),
+        item('Coming Soon', path: fae.edit_content_block_path('coming_soon'))
         # scaffold inject marker
       ]
     end
