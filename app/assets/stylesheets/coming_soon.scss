@@ -1,0 +1,37 @@
+.coming_soon {
+  &_container {
+    min-width: 100vw;
+    min-height: 100vh;
+
+    background-size: cover;
+    background-position: center;
+  }
+
+  &_foreground {
+    min-width: 100vw;
+    min-height: 100vh;
+
+    padding: $big-spacing;
+
+    background: rgba(0,0,0,0.5);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+
+  &_heading {
+    text-align: right;
+    color: $inverse-font-color;
+    font-size: modular-scale(8);
+    font-weight: 400;
+  }
+
+  &_subheading {
+    text-align: right;
+    color: $inverse-font-color;
+    font-size: modular-scale(5);
+    font-family: $base-font-family;
+    font-weight: 400;
+  }
+}

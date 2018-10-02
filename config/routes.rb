@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get '/', to: 'pages#coming_soon'
+
   resources :recipes, only: [:show]
 
   namespace :admin do
