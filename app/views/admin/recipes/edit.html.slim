@@ -8,4 +8,11 @@ section.content
       ordered: true
 
 section.content
+  = render 'fae/shared/nested_table',
+      assoc: :recipe_steps,
+      parent_item: @item,
+      cols: [:step, :preview_image],
+      ordered: true
+
+section.content
   = link_to 'View Public Page', recipe_path(@item.slug), class: 'button'

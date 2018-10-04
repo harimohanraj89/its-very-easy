@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   resources :recipes, only: [:show]
 
   namespace :admin do
+    resources :recipe_steps
     resources :recipe_ingredients
     resources :recipes
   end
