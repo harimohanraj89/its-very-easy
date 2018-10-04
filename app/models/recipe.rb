@@ -5,6 +5,7 @@ class Recipe < ApplicationRecord
   default_scope { order(:position) }
 
   has_many :recipe_ingredients
+  has_many :recipe_steps
 
   has_fae_image :hero_image
 

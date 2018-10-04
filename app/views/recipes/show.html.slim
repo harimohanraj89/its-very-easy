@@ -3,8 +3,18 @@ h1
 
 p= @recipe.description
 
+hr
+
 h2 Ingredients
 
 ul
   - @recipe.recipe_ingredients.each do |ingredient|
     li= ingredient.name
+
+hr
+
+h2 Steps
+
+ul
+  - @recipe.recipe_steps.each do |step|
+    li= step.step
