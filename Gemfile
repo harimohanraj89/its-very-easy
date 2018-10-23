@@ -34,3 +34,5 @@ gem 'fae-rails'
 gem 'bourbon'
 gem 'neat'
 gem 'bitters'
+
+gem 'fog', require: 'fog/aws'
