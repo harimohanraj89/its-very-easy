@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   get '/', to: 'pages#coming_soon'
+  get '/under-construction', to: 'pages#under_construction'
 
   resources :recipes, only: [:show]
 

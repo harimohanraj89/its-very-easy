@@ -31,6 +31,10 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'fae-rails'
+
+gem 'webpacker'
+gem 'react-rails'
+
 gem 'bourbon'
 gem 'neat'
 gem 'bitters'
