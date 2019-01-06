@@ -4,13 +4,9 @@ class UnderConstruction extends React.Component {
   render () {
     return (
       <React.Fragment>
-        {this.props.greeting}
+        Under construction...
       </React.Fragment>
     );
   }
 }
-
-UnderConstruction.propTypes = {
-  greeting: PropTypes.string
-};
 export default UnderConstruction
