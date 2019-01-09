@@ -6,6 +6,6 @@ class PagesController < ApplicationController
   def under_construction
   end
 
-  def root
+  def app
   end
 end
