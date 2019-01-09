@@ -1,9 +1,13 @@
 Rails.application.routes.draw do
   get '/', to: 'pages#coming_soon'
   get '/under-construction', to: 'pages#under_construction'
-  get '/root', to: 'pages#root'
+  get '/app', to: 'pages#app'
 
   resources :recipes, only: [:show]
+
+  namespace :api do
+    resources :recipes, only: [:index]
+  end
 
   namespace :admin do
     resources :recipe_steps
