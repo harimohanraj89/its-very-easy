@@ -5,11 +5,12 @@ import {
 } from 'react-router-dom'
 
 import UnderConstruction from '../components/UnderConstruction';
+import Recipes from '../components/Recipes';
 
 const App = (props) => (
   <Router>
     <div>
-      <Route exact path='/root' component={UnderConstruction} />
+      <Route exact path='/app' component={Recipes} />
     </div>
   </Router>
 )
