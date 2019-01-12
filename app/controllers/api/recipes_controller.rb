@@ -1,9 +1,7 @@
 module API
   class RecipesController < ActionController::API
-    respond_to :json
-
     def index
-      respond_with Recipe.all
+      render json: Recipe.all.to_json
     end
   end
 end
