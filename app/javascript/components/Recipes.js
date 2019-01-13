@@ -1,6 +1,5 @@
 import React from "react"
 import PropTypes from "prop-types"
-import axios from "axios"
 
 class Recipes extends React.Component {
   recipes() {
