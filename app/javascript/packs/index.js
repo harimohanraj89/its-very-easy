@@ -1,15 +1,15 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
-import { Provider } from 'react-redux'
+import React from "react"
+import ReactDOM from "react-dom"
+import { Provider } from "react-redux"
 
-import Routes from './routes'
-import store from '../redux/store'
+import AppContainer from "./appContainer"
+import store from "../redux/store"
 
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener("DOMContentLoaded", () => {
   ReactDOM.render(
     <Provider store={store}>
-      <Routes />
+      <AppContainer />
     </Provider>,
-    document.getElementById('application'),
+    document.getElementById("application"),
   )
 });
