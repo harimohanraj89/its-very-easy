@@ -1,12 +1,12 @@
 import React from "react"
 import { connect } from "react-redux"
-import PropTypes from "prop-types"
-import App from './app';
-import { receiveRecipes } from "../redux/actions"
+
+import AppPresenter from '../presenters/AppPresenter';
+import { receiveRecipes } from "../actions"
 
 const mapStateToProps = state => {
   return {
-    recipes: { name: "Potato salad"}
+    recipes: { name: "AppContainer salad"}
   }
 }
 
@@ -21,6 +21,6 @@ const mapDispatchToProps = dispatch => {
 const AppContainer = connect(
   mapStateToProps,
   mapDispatchToProps
-)(App)
+)(AppPresenter)
 
 export default AppContainer

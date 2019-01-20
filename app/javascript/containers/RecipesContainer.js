@@ -1,7 +1,7 @@
 import React from "react"
 import { connect } from "react-redux"
-import PropTypes from "prop-types"
-import Recipes from './Recipes';
+
+import RecipesPresenter from '../presenters/RecipesPresenter';
 
 const mapStateToProps = state => {
   return {
@@ -16,6 +16,6 @@ const mapDispatchToProps = dispatch => {
 const RecipesContainer = connect(
   mapStateToProps,
   mapDispatchToProps
-)(Recipes)
+)(RecipesPresenter)
 
 export default RecipesContainer

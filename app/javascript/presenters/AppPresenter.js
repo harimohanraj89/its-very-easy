@@ -5,8 +5,8 @@ import {
 } from "react-router-dom"
 import axios from "axios"
 
-import UnderConstruction from '../components/UnderConstruction';
-import RecipesContainer from '../components/RecipesContainer';
+import UnderConstruction from '../presenters/UnderConstruction';
+import RecipesContainer from '../containers/RecipesContainer';
 
 class App extends React.Component {
   componentDidMount() {
