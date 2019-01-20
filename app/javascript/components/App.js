@@ -6,7 +6,7 @@ import {
 import axios from "axios"
 
 import UnderConstruction from '../components/UnderConstruction';
-import RecipesContainer from '../components/RecipesContainer';
+import RecipesContainer from '../containers/RecipesContainer';
 
 class App extends React.Component {
   componentDidMount() {

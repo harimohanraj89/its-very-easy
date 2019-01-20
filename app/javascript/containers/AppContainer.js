@@ -1,8 +1,8 @@
 import React from "react"
 import { connect } from "react-redux"
-import PropTypes from "prop-types"
-import App from './app';
-import { receiveRecipes } from "../redux/actions"
+
+import App from '../components/App';
+import { receiveRecipes } from "../actions"
 
 const mapStateToProps = state => {
   return {
