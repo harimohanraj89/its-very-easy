@@ -1,15 +1,14 @@
-export const REQUEST_RECIPES='REQUEST_RECIPES'
-export const RECEIVE_RECIPES='RECEIVE_RECIPES'
+import * as types from "../types"
 
 export function requestRecipes() {
   return {
-    type: REQUEST_RECIPES
+    type: types.REQUEST_RECIPES
   }
 }
 
 export function receiveRecipes(response) {
   return {
-    type: RECEIVE_RECIPES,
+    type: types.RECEIVE_RECIPES,
     recipes: response.data
   }
 }
