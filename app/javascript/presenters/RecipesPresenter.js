@@ -1,15 +1,13 @@
 import React from "react"
 import PropTypes from "prop-types"
 
+import Recipe from "./RecipePresenter"
+
 const Recipes = ({recipes}) => {
   return (
-    <ul>
-      {recipes.map(recipe => (
-        <li key={recipe.title}>
-          <strong>{recipe.title}</strong>: {recipe.description}
-        </li>
-      ))}
-    </ul>
+    <div className="recipes">
+      {recipes.map(recipe => <Recipe key={recipe.slug} recipe={recipe} /> )}
+    </div>
   );
 }
 
