@@ -40,3 +40,4 @@ gem 'neat'
 gem 'bitters'
 
 gem 'fog', require: 'fog/aws'
+gem 'rspec-rails'
