@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   get '/under-construction', to: 'pages#under_construction'
   get '/app', to: 'pages#app'
 
-  resources :recipes, only: [:show]
+  resources :recipes, only: [:index, :show]
 
   namespace :api do
     resources :recipes, only: [:index]

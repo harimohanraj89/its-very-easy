@@ -7,16 +7,16 @@ class RecipePresenter
 
   def props
     {
-      recipe: {
-        **recipe_attributes,
-        recipe_ingredients: recipe_ingredients_attributes,
-        recipe_steps: recipe_steps_ingredients,
-      }
+      recipe: recipe_attributes
     }
   end
 
   def recipe_attributes
-    recipe.attributes.deep_symbolize_keys
+    {
+      **recipe.attributes.deep_symbolize_keys,
+      recipe_ingredients: recipe_ingredients_attributes,
+      recipe_steps: recipe_steps_ingredients,
+    }
   end
 
   def recipe_ingredients_attributes
