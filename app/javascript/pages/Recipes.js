@@ -1,4 +1,5 @@
 import React from "react"
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import PropTypes from "prop-types"
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
@@ -7,6 +8,8 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
+import CardActions from '@material-ui/core/CardActions';
+import Button from '@material-ui/core/Button';
 
 class Recipes extends React.Component {
   renderRecipe(recipe) {
@@ -22,6 +25,14 @@ class Recipes extends React.Component {
               {recipe.description}
             </Typography>
           </CardContent>
+
+          <CardActions>
+            <Link to={`/recipes/${recipe.slug}`}>
+              <Button size="small" color="primary">
+                View
+              </Button>
+            </Link>
+          </CardActions>
         </Card>
       </Grid>
     );
