@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   get '/app', to: 'pages#app'
 
   get '/recipes', to: 'pages#app'
-  get '/recipes/:id', to: 'pages#app'
+  get '/recipes/:id', to: 'pages#app', as: 'recipe'
 
   namespace :api do
     resources :recipes, only: [:index, :show]
