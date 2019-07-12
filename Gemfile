@@ -41,3 +41,6 @@ gem 'bitters'
 
 gem 'fog', require: 'fog/aws'
 gem 'rspec-rails'
+
+gem 'sentry-raven'
+gem 'dotenv-rails', groups: [:development, :test]
