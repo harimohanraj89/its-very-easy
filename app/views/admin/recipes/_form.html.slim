@@ -3,7 +3,8 @@
 
   main.content
     = fae_input f, :title, input_class: 'slugger'
-    = fae_input f, :slug
+    .hidden
+      = fae_input f, :slug, type: :hidden
     = fae_input f, :description, markdown: true
 
 
