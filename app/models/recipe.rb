@@ -9,6 +9,9 @@ class Recipe < ApplicationRecord
 
   has_fae_image :hero_image
 
+  validates :title, presence: true
+  validates :slug, presence: true
+
   def fae_display_field
     title
   end
