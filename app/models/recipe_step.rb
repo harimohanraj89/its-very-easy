@@ -7,13 +7,13 @@ class RecipeStep < ApplicationRecord
     :recipe
   end
 
-  acts_as_list add_new_at: :top
+  acts_as_list add_new_at: :bottom
   default_scope { order(:position) }
 
   has_fae_image :preview_image
 
   def fae_display_field
-    
+
   end
 
   belongs_to :recipe
