@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get '/', to: 'pages#coming_soon'
+  get '/', to: redirect('/recipes')
   get '/under-construction', to: 'pages#under_construction'
   get '/app', to: 'pages#app'
 
