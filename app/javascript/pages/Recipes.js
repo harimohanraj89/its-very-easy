@@ -46,6 +46,10 @@ class Recipes extends React.Component {
             <Typography variant="h1" gutterBottom>
               It's Very Easy!
             </Typography>
+
+            <Typography variant="h2" gutterBottom>
+              Easy Recipes for Beginners
+            </Typography>
           </Grid>
 
           {this.props.recipes.map((recipe) => {
