@@ -24,7 +24,7 @@ const Recipe = ({recipe}) => {
           <hr />
         </Grid>
 
-        <Grid xs={6} item>
+        <Grid xs={12} md={6} item>
           <Card>
             <CardContent>
               <Typography variant="h4" gutterBottom>
@@ -47,7 +47,7 @@ const Recipe = ({recipe}) => {
           </Card>
         </Grid>
 
-        <Grid xs={6} item>
+        <Grid xs={12} md={6} item>
           <Card>
             <CardContent>
               <Typography variant="h4" gutterBottom>

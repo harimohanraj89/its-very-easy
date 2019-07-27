@@ -15,25 +15,19 @@ class Recipes extends React.Component {
   renderRecipe(recipe) {
     return (
       <Grid key={recipe.id} xs={12} item>
-        <Card>
-          <CardContent>
-            <Typography variant="h3" gutterBottom>
-              {recipe.title}
-            </Typography>
+        <Link to={`/recipes/${recipe.slug}`} style={{ textDecoration: 'none' }}>
+          <Card>
+            <CardContent>
+              <Typography variant="h3" gutterBottom>
+                {recipe.title}
+              </Typography>
 
-            <Typography variant="body1">
-              {recipe.description}
-            </Typography>
-          </CardContent>
-
-          <CardActions>
-            <Link to={`/recipes/${recipe.slug}`}>
-              <Button size="small" color="primary">
-                View
-              </Button>
-            </Link>
-          </CardActions>
-        </Card>
+              <Typography variant="body1">
+                {recipe.description}
+              </Typography>
+            </CardContent>
+          </Card>
+        </Link>
       </Grid>
     );
   }
