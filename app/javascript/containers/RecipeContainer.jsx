@@ -1,7 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 
-import Recipe from '../pages/Recipe'
+import Recipe from '../pages/Recipe/index'
 
 class RecipeContainer extends React.Component {
   constructor(props) {
@@ -38,7 +38,6 @@ class RecipeContainer extends React.Component {
     } else {
       return(<Recipe recipe={this.state.recipe} />)
     }
-
   }
 }
 
