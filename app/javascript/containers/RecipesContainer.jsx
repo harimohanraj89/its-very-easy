@@ -1,7 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 
-import Recipes from '../pages/Recipes'
+import Recipes from '../pages/Recipes/index'
 
 class RecipesContainer extends React.Component {
   constructor(props) {
