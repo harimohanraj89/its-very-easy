@@ -11,22 +11,16 @@ import CardContent from '@material-ui/core/CardContent';
 import CardActions from '@material-ui/core/CardActions';
 import Button from '@material-ui/core/Button';
 
+import Fg from '../../images/fg.png'
+
 class Recipes extends React.Component {
   renderRecipe(recipe) {
     return (
-      <Grid key={recipe.id} xs={12} item>
+      <Grid key={recipe.id} xs={6} md={3} item>
         <Link to={`/recipes/${recipe.slug}`} style={{ textDecoration: 'none' }}>
-          <Card>
-            <CardContent>
-              <Typography variant="h3" gutterBottom>
-                {recipe.title}
-              </Typography>
-
-              <Typography variant="body1">
-                {recipe.description}
-              </Typography>
-            </CardContent>
-          </Card>
+          <h2 className="recipe_title">
+            {recipe.title}
+          </h2>
         </Link>
       </Grid>
     );
@@ -35,15 +29,11 @@ class Recipes extends React.Component {
   render() {
     return(
       <div className="recipes">
-        <Grid container spacing={24}>
+        <Grid container spacing={0}>
           <Grid xs={12} item>
-            <Typography variant="h1" gutterBottom>
-              It's Very Easy!
-            </Typography>
-
-            <Typography variant="h2" gutterBottom>
-              Easy Recipes for Beginners
-            </Typography>
+            <div className="recipes_header">
+              <img className="recipes_header_title" src={Fg} />
+            </div>
           </Grid>
 
           {this.props.recipes.map((recipe) => {

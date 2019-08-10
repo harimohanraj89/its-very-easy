@@ -1,11 +1,25 @@
+h1, h2, h3, h4, h5, h6 {
+  font-family: Oswald, Impact, sans-serif;
+  text-transform: uppercase;
+}
+
 .recipe {
-  max-width: 60rem;
-  margin: 0 auto;
   padding-top: 2rem;
 }
 
 .recipes {
-  max-width: 60rem;
-  margin: 0 auto;
-  padding-top: 2rem;
+  &_header {
+    padding: 2rem 0;
+    background: url('../images/bg.png');
+    background-size: cover;
+    min-height: 90vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &_title {
+      max-width: 90%;
+    }
+  }
 }
