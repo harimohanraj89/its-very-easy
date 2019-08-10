@@ -1,11 +1,42 @@
-.recipe {
-  max-width: 60rem;
-  margin: 0 auto;
-  padding-top: 2rem;
-}
-
 .recipes {
-  max-width: 60rem;
-  margin: 0 auto;
-  padding-top: 2rem;
+  &_header {
+    padding: 2rem 0;
+    margin-bottom: 0.5rem;
+    min-height: 90vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: url('../images/bg.png');
+    background-size: cover;
+
+    &_title {
+      max-width: 30rem;
+      width: 90%;
+    }
+  }
+
+  .recipe-item {
+    &_title {
+      min-height: 8rem;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      h2 {
+        margin: 0;
+        text-align: center;
+        color: black;
+      }
+    }
+  }
+
+  .recipe-item-1 { background: $recipe1 }
+  .recipe-item-2 { background: $recipe2 }
+  .recipe-item-3 { background: $recipe3 }
+  .recipe-item-4 { background: $recipe4 }
+  .recipe-item-5 { background: $recipe5 }
+  .recipe-item-6 { background: $recipe6 }
 }

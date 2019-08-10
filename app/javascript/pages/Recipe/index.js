@@ -10,68 +10,62 @@ import CardContent from '@material-ui/core/CardContent';
 
 const Recipe = ({recipe}) => {
   return (
-    <div className={styles.potato}>
-      <div className="recipe">
-        <Grid container spacing={24}>
-          <Grid xs={12} item>
-            <Typography variant="h3" gutterBottom>
-              {recipe.title}
-            </Typography>
+    <div className={`recipe recipe-${(recipe.position - 1) % 6 + 1}`}>
+      <Grid container spacing={0}>
+        <Grid xs={12} item>
+          <h1 className="recipe_title">
+            {recipe.title}
+          </h1>
 
-            <Typography variant="body1">
-              {recipe.description}
-            </Typography>
-
-            <hr />
-          </Grid>
-
-          <Grid xs={12} md={6} item>
-            <Card>
-              <CardContent>
-                <Typography variant="h4" gutterBottom>
-                  Ingredients
-                </Typography>
-                <List>
-                  {
-                    recipe.recipe_ingredients.map((ingredient) => {
-                      return (
-                        <ListItem>
-                          <ListItemText>
-                            {ingredient.name}
-                          </ListItemText>
-                        </ListItem>
-                      )
-                    })
-                  }
-                </List>
-              </CardContent>
-            </Card>
-          </Grid>
-
-          <Grid xs={12} md={6} item>
-            <Card>
-              <CardContent>
-                <Typography variant="h4" gutterBottom>
-                  Steps
-                </Typography>
-                <List>
-                  {
-                    recipe.recipe_steps.map((step) => {
-                      return (
-                        <ListItem>
-                          <ListItemText>
-                            {step.step}
-                          </ListItemText>
-                        </ListItem>
-                      )
-                    })
-                  }
-                </List>
-              </CardContent>
-            </Card>
-          </Grid>
+          <p className="recipe_description">
+            {recipe.description}
+          </p>
         </Grid>
-      </div>
+      </Grid>
+
+      <Grid container>
+        <Grid xs={12} md={6} item>
+          <Card className = "recipe_section recipe_ingredients">
+            <CardContent>
+              <h1>
+                Ingredients
+              </h1>
+              <ul>
+                {
+                  recipe.recipe_ingredients.map((ingredient) => {
+                    return (
+                      <li>
+                        {ingredient.name}
+                      </li>
+                    )
+                  })
+                }
+              </ul>
+            </CardContent>
+          </Card>
+        </Grid>
+
+        <Grid xs={12} md={6} item>
+          <Card className = "recipe_section recipe_steps">
+            <CardContent>
+              <h1>
+                Steps
+              </h1>
+              <ul>
+                {
+                  recipe.recipe_steps.map((step) => {
+                    return (
+                      <li>
+                        {step.step}
+                      </li>
+                    )
+                  })
+                }
+              </ul>
+            </CardContent>
+          </Card>
+        </Grid>
+      </Grid>
     </div>
   );
 }

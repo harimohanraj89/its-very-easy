@@ -1,0 +1,28 @@
+.recipe {
+  padding: 1rem 0.5rem;
+
+  min-height: 100vh;
+
+  &_title {
+    text-align: center;
+    font-size: 2rem;
+  }
+
+  &_section {
+    margin: 0.5rem 0;
+
+    ul {
+      li {
+        margin-top: 0.25rem;
+        margin-bottom: 0.25rem;
+      }
+    }
+  }
+}
+
+.recipe-1 { background: $recipe1 }
+.recipe-2 { background: $recipe2 }
+.recipe-3 { background: $recipe3 }
+.recipe-4 { background: $recipe4 }
+.recipe-5 { background: $recipe5 }
+.recipe-6 { background: $recipe6 }
