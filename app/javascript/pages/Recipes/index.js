@@ -18,8 +18,8 @@ class Recipes extends React.Component {
     return (
       <Grid key={recipe.id} xs={6} md={3} item key={recipe.position}>
         <Link to={`/recipes/${recipe.slug}`} style={{ textDecoration: 'none' }}>
-          <div className={`recipe recipe-${(recipe.position - 1) % 6 + 1}`}>
-            <div className="recipe_title">
+          <div className={`recipe-item recipe-item-${(recipe.position - 1) % 6 + 1}`}>
+            <div className="recipe-item_title">
               <h2>
                 {recipe.title}
               </h2>

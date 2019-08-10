@@ -10,62 +10,58 @@ import CardContent from '@material-ui/core/CardContent';
 
 const Recipe = ({recipe}) => {
   return (
-    <div className="recipe">
-      <Grid container spacing={24}>
+    <div className={`recipe recipe-${(recipe.position - 1) % 6 + 1}`}>
+      <Grid container spacing={0}>
         <Grid xs={12} item>
-          <Typography variant="h3" gutterBottom>
+          <h1 className="recipe_title">
             {recipe.title}
-          </Typography>
+          </h1>
 
-          <Typography variant="body1">
+          <p className="recipe_description">
             {recipe.description}
-          </Typography>
-
-          <hr />
+          </p>
         </Grid>
+      </Grid>
 
+      <Grid container>
         <Grid xs={12} md={6} item>
-          <Card>
+          <Card className = "recipe_section recipe_ingredients">
             <CardContent>
-              <Typography variant="h4" gutterBottom>
+              <h1>
                 Ingredients
-              </Typography>
-              <List>
+              </h1>
+              <ul>
                 {
                   recipe.recipe_ingredients.map((ingredient) => {
                     return (
-                      <ListItem>
-                        <ListItemText>
-                          {ingredient.name}
-                        </ListItemText>
-                      </ListItem>
+                      <li>
+                        {ingredient.name}
+                      </li>
                     )
                   })
                 }
-              </List>
+              </ul>
             </CardContent>
           </Card>
         </Grid>
 
         <Grid xs={12} md={6} item>
-          <Card>
+          <Card className = "recipe_section recipe_steps">
             <CardContent>
-              <Typography variant="h4" gutterBottom>
+              <h1>
                 Steps
-              </Typography>
-              <List>
+              </h1>
+              <ul>
                 {
                   recipe.recipe_steps.map((step) => {
                     return (
-                      <ListItem>
-                        <ListItemText>
-                          {step.step}
-                        </ListItemText>
-                      </ListItem>
+                      <li>
+                        {step.step}
+                      </li>
                     )
                   })
                 }
-              </List>
+              </ul>
             </CardContent>
           </Card>
         </Grid>
