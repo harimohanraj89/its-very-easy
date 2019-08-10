@@ -3,6 +3,13 @@ h1, h2, h3, h4, h5, h6 {
   text-transform: uppercase;
 }
 
+$recipe1: rgb(129, 193, 160);
+$recipe2: rgb(216, 180, 177);
+$recipe3: rgb(221, 157, 150);
+$recipe4: rgb(248, 228, 159);
+$recipe5: rgb(214, 213, 212);
+$recipe6: rgb(211, 234, 221);
+
 .recipe {
   background: coral;
   &_title {
@@ -11,11 +18,26 @@ h1, h2, h3, h4, h5, h6 {
     align-items: center;
     justify-content: center;
   }
+
+  &_title {
+    h2 {
+      color: black;
+      margin: 0;
+    }
+  }
 }
+
+.recipe-1 { background: $recipe1 }
+.recipe-2 { background: $recipe2 }
+.recipe-3 { background: $recipe3 }
+.recipe-4 { background: $recipe4 }
+.recipe-5 { background: $recipe5 }
+.recipe-6 { background: $recipe6 }
 
 .recipes {
   &_header {
     padding: 2rem 0;
+    margin-bottom: 0.5rem;
     background: url('../images/bg.png');
     background-size: cover;
     min-height: 90vh;
