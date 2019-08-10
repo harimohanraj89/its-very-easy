@@ -18,9 +18,13 @@ class Recipes extends React.Component {
     return (
       <Grid key={recipe.id} xs={6} md={3} item>
         <Link to={`/recipes/${recipe.slug}`} style={{ textDecoration: 'none' }}>
-          <h2 className="recipe_title">
-            {recipe.title}
-          </h2>
+          <div className="recipe">
+            <div className="recipe_title">
+              <h2>
+                {recipe.title}
+              </h2>
+            </div>
+          </div>
         </Link>
       </Grid>
     );

@@ -4,7 +4,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .recipe {
-  padding-top: 2rem;
+  background: coral;
+  &_title {
+    min-height: 8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 .recipes {
