@@ -5,6 +5,13 @@
     <title>It's Very Easy!</title>
     <%= csrf_meta_tags %>
 
+    <style>
+      @font-face {
+        font-family: 'mmg';
+        src: url("/mmg.ttf");
+      }
+    </style>
+
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application' %>
@@ -12,6 +19,7 @@
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700|Sorts+Mill+Goudy" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=PT+Serif&display=swap" rel="stylesheet">
+    
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-76675310-2"></script>
     <script>

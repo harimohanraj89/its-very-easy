@@ -16,7 +16,7 @@ import Fg from '../../images/fg.png'
 class Recipes extends React.Component {
   renderRecipe(recipe) {
     return (
-      <Grid key={recipe.id} xs={6} md={3} item key={recipe.position}>
+      <Grid key={recipe.id} xs={12} md={3} item key={recipe.position}>
         <Link to={`/recipes/${recipe.slug}`} style={{ textDecoration: 'none' }}>
           <div className={`recipe-item recipe-item-${(recipe.position - 1) % 6 + 1}`}>
             <div className="recipe-item_title">
