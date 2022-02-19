@@ -36,7 +36,17 @@ class Recipes extends React.Component {
         <Grid container spacing={0}>
           <Grid xs={12} item>
             <div className="recipes_header">
-              <img className="recipes_header_title" src={Fg} />
+              <Card className="recipes_header-card">
+                <CardContent>
+                  <h1 className="recipes_title">
+                    It's Very Easy!
+                  </h1>
+                  <br></br>
+                  <h2 className="recipes_subtitle">
+                    Easy Recipes For Beginners
+                  </h2>
+                </CardContent>
+              </Card>
             </div>
           </Grid>
 
