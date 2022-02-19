@@ -33,23 +33,29 @@ class Recipes extends React.Component {
   render() {
     return(
       <div className="recipes">
-        <Grid container spacing={0}>
-          <Grid xs={12} item>
-            <div className="recipes_header">
-              <Card className="recipes_header-card">
-                <CardContent>
-                  <h1 className="recipes_title">
-                    It's Very Easy!
-                  </h1>
-                  <br></br>
-                  <h2 className="recipes_subtitle">
-                    Easy Recipes For Beginners
-                  </h2>
-                </CardContent>
-              </Card>
-            </div>
+        <div className="recipes_header">
+          <Grid container spacing={0}>
+            <Grid xs={12} item>
+                <Card className="recipes_header-card">
+                  <CardContent>
+                    <h1 className="recipes_title">
+                      It's Very Easy!
+                    </h1>
+                    <br></br>
+                    <h2 className="recipes_subtitle">
+                      Easy Recipes For Beginners
+                    </h2>
+                  </CardContent>
+                </Card>
+            </Grid>
+            <Grid xs={12} item>
+              <span className="recipes_scroll">
+                &#8595;
+              </span>
+            </Grid>
           </Grid>
-
+        </div>
+        <Grid container spacing={0}>
           {this.props.recipes.map((recipe) => {
             return this.renderRecipe(recipe);
           })}
