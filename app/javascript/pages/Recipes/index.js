@@ -14,6 +14,23 @@ import Button from '@material-ui/core/Button';
 import Fg from '../../images/fg.png'
 
 class Recipes extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      search: "",
+      recipes: props.recipes
+    };
+
+    this.filterRecipes = this.filterRecipes.bind(this);
+  }
+
+  filterRecipes(event) {
+    this.setState({
+      search: event.target.value,
+      recipes: this.props.recipes
+    });
+  }
+  
   renderRecipe(recipe) {
     return (
       <Grid key={recipe.id} xs={12} md={3} item key={recipe.position}>
@@ -41,10 +58,7 @@ class Recipes extends React.Component {
                     <h1 className="recipes_title">
                       It's Very Easy!
                     </h1>
-                    <br></br>
-                    <h2 className="recipes_subtitle">
-                      Easy Recipes For Beginners
-                    </h2>
+                    <input value={this.state.search} onChange={this.filterRecipes} className="recipes_search" type="text" placeholder="&#128269;"></input>
                   </CardContent>
                 </Card>
             </Grid>
@@ -56,7 +70,7 @@ class Recipes extends React.Component {
           </Grid>
         </div>
         <Grid container spacing={0}>
-          {this.props.recipes.map((recipe) => {
+          {this.state.recipes.map((recipe) => {
             return this.renderRecipe(recipe);
           })}
         </Grid>
