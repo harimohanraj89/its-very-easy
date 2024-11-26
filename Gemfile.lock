@@ -88,7 +88,7 @@ GEM
       railties (>= 3.2, < 6.1)
     dry-inflector (0.1.2)
     erubi (1.7.1)
-    excon (0.62.0)
+    excon (0.71.0)
     execjs (2.7.0)
     fae-rails (2.0.0)
       acts_as_list (~> 0.9.11)
